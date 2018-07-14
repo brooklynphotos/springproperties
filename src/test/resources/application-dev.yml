@@ -1,0 +1,4 @@
+impala:
+  url: jdbc://impala.dev
+  user: dev-tester
+  password: testsecret
