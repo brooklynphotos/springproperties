@@ -36,14 +36,11 @@ public class RestProperties {
 
     @Bean
     public DbRepo dbRepo(){
-        return new DbRepo() {
-            @Override
-            public List<Person> findPeople() {
-                System.out.println(String.format("Timeout: %d",dbTimeout));
-                final Person p = new Person();
-                p.setName(dbUrl);
-                return Arrays.asList(p);
-            }
+        return () -> {
+            System.out.println(String.format("Timeout: %d",dbTimeout));
+            final Person p = new Person();
+            p.setName(dbUrl);
+            return Arrays.asList(p);
         };
     }
 }

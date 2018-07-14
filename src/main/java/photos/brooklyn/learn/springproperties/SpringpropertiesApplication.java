@@ -11,7 +11,6 @@ import photos.brooklyn.learn.springproperties.repo.HadoopRepo;
 import photos.brooklyn.learn.springproperties.repo.WebRepo;
 
 import javax.inject.Inject;
-import java.util.Arrays;
 
 @SpringBootApplication
 public class SpringpropertiesApplication {
